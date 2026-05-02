@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vending-Bench v0 — Multi-Agent AI Benchmark</title>
+<style>
+:root {
+  --bg: #0d1117; --panel: #161b22; --line: #30363d;
+  --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff;
+  --good: #3fb950; --warn: #d29922; --bad: #f85149;
+  --serif: Georgia, "Times New Roman", serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px; line-height: 1.55; }
+header { padding: 32px 24px 18px; border-bottom: 1px solid var(--line); }
+header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.01em; }
+header .sub { color: var(--muted); font-size: 14px; }
+header .meta { color: var(--muted); font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+nav { display: flex; gap: 0; border-bottom: 1px solid var(--line); padding: 0 24px;
+  background: var(--panel); position: sticky; top: 0; z-index: 5; }
+nav button { background: transparent; color: var(--muted); border: 0; border-bottom: 2px solid transparent;
+  padding: 14px 18px; cursor: pointer; font-size: 14px; font-family: inherit; }
+nav button.active { color: var(--accent); border-bottom-color: var(--accent); }
+nav button:hover { color: var(--text); }
+main { padding: 24px; max-width: 1100px; margin: 0 auto; }
+section { display: none; }
+section.active { display: block; }
+h2 { font-size: 22px; margin: 0 0 6px; }
+h2 + .sub { color: var(--muted); margin-bottom: 24px; }
+.brief { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  padding: 14px 18px; border-radius: 6px; margin-bottom: 24px; }
+.brief strong { color: var(--accent); }
+.contract { background: var(--panel); border: 1px solid var(--line); padding: 12px 16px;
+  border-radius: 6px; margin-bottom: 24px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 13.5px; vertical-align: top; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+td.slug { font-family: var(--mono); color: var(--accent); }
+td.status { font-family: var(--mono); }
+td.status.pending { color: var(--muted); }
+td.status.ok { color: var(--good); }
+td.status.partial { color: var(--warn); }
+td.status.fail { color: var(--bad); }
+.placeholder { color: var(--muted); font-style: italic; padding: 40px 0; text-align: center; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-family: var(--mono);
+  background: rgba(210, 153, 34, 0.15); color: var(--warn); border: 1px solid var(--warn); }
+.note { background: rgba(248, 81, 73, 0.08); border-left: 3px solid var(--bad); padding: 12px 16px;
+  margin: 18px 0; border-radius: 0 6px 6px 0; font-size: 13.5px; }
+.note strong { color: var(--bad); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.kt-source { font-family: var(--mono); color: var(--muted); font-size: 12px; }
+footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Vending-Bench v0</h1>
+  <div class="sub">Multi-agent AI benchmark — 5 dispatch endpoints, 4 agent families, identical-prompt fairness contract</div>
+  <div class="meta">methodology: README.md · dispatch: bench-fanout.py rail · scoring: Trident consensus (subjective) or diff-against-reference (deterministic)</div>
+</header>
+
+<nav>
+  <button class="active" data-tab="c1">Challenge 1: Website Design</button>
+  <button data-tab="c2">Challenge 2: Functional Code</button>
+  <button data-tab="kt">Historical: Kiln-Tide-Bench</button>
+</nav>
+
+<main>
+
+<section id="c1" class="active">
+  <h2>Challenge 1: Website Design</h2>
+  <div class="sub">Single-file static HTML, system fonts only, 80–200 LOC. Discriminator: typographic restraint vs template recall.</div>
+
+  <div class="contract">FAIRNESS: blind generation · no tool use · no web access · single-shot · identical prompt verbatim · output one self-contained HTML file</div>
+
+  <div class="brief">
+    <strong>Brief:</strong> Halyard Type — Kepler Display launch page. Independent type foundry, Vienna, debut high-contrast display serif for editorial headlines and book covers. Design philosophy: restraint, classical proportion, respect for the reader. System fonts only (Georgia, Garamond, Times, serif fallbacks). Foundry name + location, typeface name + philosophy statement, display-size headline, character set / glyph showcase, body-size paragraph demonstrating reading texture.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (4 axes)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="slug">anismin</td><td class="status pending">pending</td><td><a href="challenge-1/anismin/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
+      <tr><td class="slug">meridian-codex</td><td class="status pending">pending</td><td><a href="challenge-1/meridian-codex/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
+      <tr><td class="slug">meridian-opus</td><td class="status pending">pending</td><td><a href="challenge-1/meridian-opus/output.html">output.html</a></td><td class="status pending">self-include cold-prompt</td></tr>
+      <tr><td class="slug">kcs-classic</td><td class="status pending">pending</td><td><a href="challenge-1/kcs-classic/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
+      <tr><td class="slug">kcs-swarm</td><td class="status pending">pending</td><td><a href="challenge-1/kcs-swarm/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
+    </tbody>
+  </table>
+
+  <p class="placeholder">Per-agent submissions land here as the fanout completes. Scoring rubric: <strong>accessibility</strong> (semantic HTML, alt text, color contrast) · <strong>responsive design</strong> (mobile-first) · <strong>inline-discipline</strong> (zero external deps) · <strong>brief-fidelity</strong> (foundry + typeface + philosophy + display + glyphs + body texture all present).</p>
+</section>
+
+<section id="c2">
+  <h2>Challenge 2: Functional Code</h2>
+  <div class="sub">Stdlib-only Python deterministic data-processing benchmark. Discriminator: edge-case discipline + explicit conflict-resolution policy declaration.</div>
+
+  <div class="contract">FAIRNESS: blind generation · no tool use · no web access · single-shot · identical prompt verbatim · output one self-contained .py file + report.json</div>
+
+  <div class="brief">
+    <strong>Brief (TBD):</strong> stdlib-only Python <code>reconcile.py</code> taking two embedded CSVs (payments + refunds) → deterministic JSON to stdout. Edge cases: duplicate tx_ids, partial refunds, currency mismatch, refund-exceeds-payment, malformed rows, whitespace/case in ids. Output sorted by tx_id. Reference output (<code>reference/challenge-2/expected.json</code>) precomputed by hand before dispatch; scoring is diff-against-reference. Conflict-resolution policy MUST be explicitly named in the output (<code>applied_policy</code> field) — agent declared no policy = fail.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (diff vs reference)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="slug">anismin</td><td class="status pending">pending</td><td>solution.py · report.json</td><td class="status pending">held — sequencing C1 first</td></tr>
+      <tr><td class="slug">meridian-codex</td><td class="status pending">pending</td><td>solution.py · report.json</td><td class="status pending">held — sequencing C1 first</td></tr>
+      <tr><td class="slug">meridian-opus</td><td class="status pending">pending</td><td>solution.py · report.json</td><td class="status pending">held — sequencing C1 first</td></tr>
+      <tr><td class="slug">kcs-classic</td><td class="status pending">pending</td><td>solution.py · report.json</td><td class="status pending">held — sequencing C1 first</td></tr>
+      <tr><td class="slug">kcs-swarm</td><td class="status pending">pending</td><td>solution.py · report.json</td><td class="status pending">held — sequencing C1 first</td></tr>
+    </tbody>
+  </table>
+
+  <p class="placeholder">C2 held until C1 lifecycle is validated end-to-end (inbox → processing → processed → bench-results, plus meridian-opus self-include path). Sequence discipline per Trident consensus 2026-05-02.</p>
+</section>
+
+<section id="kt">
+  <h2>Historical: Kiln-Tide-Bench</h2>
+  <div class="sub">Live port of <a href="https://github.com/ademczuk/Kiln-Tide-Bench">ademczuk/Kiln-Tide-Bench</a> at port-time.</div>
+
+  <div class="kt-source">Observed at port-time (2026-05-02): <strong>7 agent attempts</strong> · source: <a href="https://github.com/ademczuk/Kiln-Tide-Bench">https://github.com/ademczuk/Kiln-Tide-Bench</a></div>
+
+  <p style="margin-top: 18px;"><span class="tag">pre-Sprint-1/2/3, session-bloat era</span></p>
+
+  <div class="note">
+    <strong>Honest comparison rule:</strong> Kiln-Tide-Bench results predate Sprint-1/2/3 tooling and the session-bloat fixes that materially changed brain behavior. Every row below carries (or must be annotated with) a brain-state header — <code>model_version</code>, <code>sprint_level</code>, <code>timeout_config_at_run_time</code>. <strong>Silent overlay of these results against current Vending-Bench Sprint-3 numbers in the same chart is forbidden.</strong> Cite the brain-state header explicitly when comparing.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Agent slug</th><th>Brain</th><th>Sprint level</th><th>Source dir</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="slug">anismin</td><td>Anismin (model_version: unknown — pre-tagging era)</td><td><span class="tag">pre-Sprint-1</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/anismin">anismin/</a></td></tr>
+      <tr><td class="slug">anismin-redux</td><td>Anismin (re-attempt; model_version: unknown)</td><td><span class="tag">pre-Sprint-1</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/anismin-redux">anismin-redux/</a></td></tr>
+      <tr><td class="slug">claude-cli</td><td>Claude Code CLI (model_version: unknown)</td><td><span class="tag">pre-Sprint-1</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/claude-cli">claude-cli/</a></td></tr>
+      <tr><td class="slug">kimiclaw</td><td>KimiClawSwarm (model_version: K2.6 era — exact unknown)</td><td><span class="tag">pre-Sprint-1</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/kimiclaw">kimiclaw/</a></td></tr>
+      <tr><td class="slug">meridian</td><td>Meridian (codex pre-split era; model_version: unknown)</td><td><span class="tag">pre-Sprint-1</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/meridian">meridian/</a></td></tr>
+      <tr><td class="slug">meridian-codex</td><td>Meridian-Codex gpt-5.4</td><td><span class="tag">pre-Sprint-2</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/meridian-codex">meridian-codex/</a></td></tr>
+      <tr><td class="slug">meridian-opus</td><td>Clawfish-opus-4-7</td><td><span class="tag">pre-Sprint-2</span></td><td><a href="https://github.com/ademczuk/Kiln-Tide-Bench/tree/main/meridian-opus">meridian-opus/</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="placeholder"><code>timeout_config_at_run_time</code> for these runs is not recoverable from the source repo's commit history — annotate as "unknown (pre-Sprint era, session-bloat fixes not yet shipped)" when citing in any comparison narrative.</p>
+</section>
+
+</main>
+
+<footer>
+  Generated 2026-05-02 · Vending-Bench v0 · Per-agent submissions land via <code>bench-fanout.py</code> rail (AnisminOS commit 42cb921) · See README.md for full methodology
+</footer>
+
+<script>
+const buttons = document.querySelectorAll('nav button');
+const sections = document.querySelectorAll('main section');
+buttons.forEach(b => b.addEventListener('click', () => {
+  buttons.forEach(x => x.classList.remove('active'));
+  sections.forEach(s => s.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>
