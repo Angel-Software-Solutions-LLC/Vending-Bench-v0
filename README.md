@@ -1,6 +1,16 @@
 # Vending-Bench v0
 
-Multi-agent AI benchmark platform comparing 5 distinct dispatch endpoints across 4 agent families on identical prompts. Methodology designed for honest first-shot reasoning comparison, not infrastructure-disparity measurement.
+Multi-agent AI benchmark platform comparing **4 brain families across 5 dispatch shapes** on identical prompts. Methodology designed for honest first-shot reasoning comparison, not infrastructure-disparity measurement.
+
+## Evidentiary limits (read first)
+
+This is a v0 portfolio benchmark with deliberately scoped claims. Before drawing inferences from the results:
+
+- **Sample size is small.** C1 produced N=3 substantive results (anismin, meridian-codex, meridian-opus self-include) + N=2 INCOMPLETE (kcs-classic, kcs-swarm — see Tab 1 KCS finding for the rail-bug story). Single-challenge data; do not extrapolate.
+- **Scoring rubric is not inter-rater-validated.** The 4-axis subjective scoring (accessibility / responsive / inline-discipline / brief-fidelity) is Trident-consensus across two independent reviewer brains (Codex GPT-5.4 + Gemini-flash). Absolute scores drift between Trident invocations on the same content (rubric calibration noise) — trust the **ranking** more than the absolute numbers. No human inter-rater reliability study.
+- **Brain-family overlap.** `meridian-opus` (clawfish-opus-4-7 on Discord) and `meridian-codex` (gpt-5.4 via openclaw-gateway) share Meridian's persona + memory files but are distinct inference brains. The `5 dispatch shapes` framing is honest; calling it `5 brains` would inflate diversity. Anismin Opus 4.7 + KimiClawSwarm K2.6 + Meridian-Codex gpt-5.4 + Meridian-Opus claude-opus-4-7 = 4 brain families.
+- **KCS over-decomposition is a known v0 finding.** Both KCS dispatch shapes timed out without producing deliverables on this simple-task benchmark. The bench-fanout rail bug that initially masked this as "OK" was caught + patched mid-C1 (commit 462ce5b). KCS cadence on small tasks is documented as a separate operational signal, not a benchmark failure of the rail.
+- **C2 is in-flight as of v0 publication.** The functional-code challenge (stdlib Python CSV reconciliation) is being drafted by Meridian. Tab 2 shows placeholder until results land via the same bench-fanout rail.
 
 ## Methodology
 

@@ -1,0 +1,9 @@
+{
+  "slug": "meridian-opus",
+  "ok": true,
+  "transport": "self-include via Discord cold-prompt one-shot",
+  "model": "clawfish-opus-4-7",
+  "captured_at": "2026-05-02T18:08Z",
+  "captured_from": "meridian-postgres.messages (raw, pre-Discord-render)",
+  "note": "Operator extracted from 3-message Discord paste; postgres raw text preserved the * universal selector that Discord client stripped as bold-markdown. Reply generated cold-prompt one-shot per fairness contract."
+}

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kepler Display — Halyard Type</title>
+<style>
+:root{
+  --bg:#f4efe7;
+  --paper:#fbf8f3;
+  --ink:#181512;
+  --muted:#6d6258;
+  --rule:#d8cfc4;
+  --accent:#2f261f;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
+body{
+  font-family:Georgia,"Times New Roman",Times,serif;
+  line-height:1.45;
+}
+.page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 24px 56px;
+}
+header{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:end;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:18px;
+  margin-bottom:28px;
+}
+.kicker{
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 10px;
+}
+h1{
+  margin:0;
+  font-family:Garamond,Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(52px,12vw,132px);
+  line-height:.92;
+  letter-spacing:-.03em;
+}
+.meta{
+  text-align:right;
+  font-size:14px;
+  color:var(--muted);
+}
+.tagline{
+  max-width:52rem;
+  font-size:20px;
+  color:var(--accent);
+  margin:0 0 30px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  margin-bottom:34px;
+}
+.panel{
+  background:var(--paper);
+  border:1px solid var(--rule);
+  padding:22px 22px 20px;
+}
+.panel h2{
+  margin:0 0 14px;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:400;
+}
+.display{
+  font-family:Garamond,Georgia,"Times New Roman",serif;
+  font-size:clamp(38px,5.9vw,74px);
+  line-height:.96;
+  letter-spacing:-.025em;
+  margin:0 0 18px;
+}
+.subdisplay{
+  font-size:clamp(22px,2.6vw,34px);
+  line-height:1.06;
+  margin:0;
+}
+.text{
+  font-size:18px;
+  max-width:38rem;
+  margin:0 0 16px;
+}
+.text:last-child{margin-bottom:0}
+.note{
+  font-size:14px;
+  color:var(--muted);
+  margin-top:10px;
+}
+.charset{
+  font-size:30px;
+  line-height:1.5;
+  word-break:break-word;
+}
+.smallset{
+  font-size:19px;
+  line-height:1.7;
+  margin-top:14px;
+}
+.reading{
+  columns:2 240px;
+  column-gap:30px;
+}
+.reading p{
+  margin:0 0 14px;
+  font-size:17px;
+  text-align:justify;
+}
+footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  border-top:1px solid var(--rule);
+  padding-top:16px;
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+}
+hr{
+  border:0;
+  border-top:1px solid var(--rule);
+  margin:0 0 28px;
+}
+@media (max-width:820px){
+  .grid{grid-template-columns:1fr}
+  .meta{text-align:left}
+  header{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="kicker">Type specimen / launch page</p>
+        <h1>Kepler<br>Display</h1>
+      </div>
+      <div class="meta">
+        <div>Halyard Type</div>
+        <div>Vienna, Austria</div>
+      </div>
+    </header>
+
+    <p class="tagline">
+      A high-contrast display serif for editorial headlines and book covers, drawn with restraint,
+      classical proportion, and respect for the reader.
+    </p>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>Display showing</h2>
+        <p class="display">Titles deserve poise,<br>not noise.</p>
+        <p class="subdisplay">Sharp contrast, composed rhythm, and a measured literary voice.</p>
+      </article>
+
+      <aside class="panel">
+        <h2>Foundry philosophy</h2>
+        <p class="text">
+          Halyard Type approaches display typography as an act of editing. Kepler Display is made
+          to carry emphasis without spectacle, to hold the page with dignity, and to let meaning
+          arrive before mannerism.
+        </p>
+        <p class="note">System-font specimen rendered with classic serif fallbacks for local viewing.</p>
+      </aside>
+    </section>
+
+    <section class="panel" style="margin-bottom:30px">
+      <h2>Character set / glyph showcase</h2>
+      <div class="charset">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+        abcdefghijklmnopqrstuvwxyz<br>
+        0123456789 &amp; £ € $ ¥ § ¶ † ‡<br>
+        . , : ; ! ? ¡ ¿ “ ” ‘ ’ ( ) [ ] { } / \ — – -<br>
+        À Á Â Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ñ Ò Ó Ô Ö Ø Ù Ú Û Ü Ý Ÿ<br>
+        à á â ä å æ ç è é ê ë ì í î ï ñ ò ó ô ö ø ù ú û ü ý ÿ
+      </div>
+      <div class="smallset">
+        Ligature mood: ff fi fl ffi ffl &nbsp;&nbsp;•&nbsp;&nbsp;
+        Numerals in company: 1492 1789 1927 2026 &nbsp;&nbsp;•&nbsp;&nbsp;
+        Sample title: <em>The Geometry of Silence</em>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Reading texture</h2>
+      <div class="reading">
+        <p>
+          Kepler Display is intended for the moment when a page first meets the eye. Its contrast is
+          decisive but not brittle, its proportions classical without stiffness, and its color on the
+          page remains even enough to support extended titles, jacket copy, and the ceremonial duties
+          of a headline. The aim is not nostalgia. The aim is clarity with bearing.
+        </p>
+        <p>
+          In use, the face favors confident spacing, moderate line lengths, and a calm hierarchy. It
+          performs best where language should feel authored rather than advertised, where tone matters
+          as much as volume. Book covers, magazines, cultural programs, essays, and title pages all
+          benefit from its balance of precision and warmth.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>Kepler Display by Halyard Type</div>
+      <div>Vienna, Austria</div>
+      <div>Debut release specimen</div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -60,8 +60,8 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
 <body>
 <header>
   <h1>Vending-Bench v0</h1>
-  <div class="sub">Multi-agent AI benchmark — 5 dispatch endpoints, 4 agent families, identical-prompt fairness contract</div>
-  <div class="meta">methodology: README.md · dispatch: bench-fanout.py rail · scoring: Trident consensus (subjective) or diff-against-reference (deterministic)</div>
+  <div class="sub">Multi-agent AI benchmark — 4 brain families × 5 dispatch shapes, identical-prompt fairness contract</div>
+  <div class="meta">methodology: README.md · dispatch: bench-fanout.py rail · scoring: Trident consensus (subjective) or diff-against-reference (deterministic) · v0 — 2026-05-02</div>
 </header>
 
 <nav>
@@ -87,15 +87,19 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
       <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (4 axes)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="slug">anismin</td><td class="status pending">pending</td><td><a href="challenge-1/anismin/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
-      <tr><td class="slug">meridian-codex</td><td class="status pending">pending</td><td><a href="challenge-1/meridian-codex/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
-      <tr><td class="slug">meridian-opus</td><td class="status pending">pending</td><td><a href="challenge-1/meridian-opus/output.html">output.html</a></td><td class="status pending">self-include cold-prompt</td></tr>
-      <tr><td class="slug">kcs-classic</td><td class="status pending">pending</td><td><a href="challenge-1/kcs-classic/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
-      <tr><td class="slug">kcs-swarm</td><td class="status pending">pending</td><td><a href="challenge-1/kcs-swarm/output.html">output.html</a></td><td class="status pending">awaiting fanout completion</td></tr>
+      <tr><td class="slug">anismin</td><td class="status ok">OK 76.1s</td><td><a href="challenge-1/anismin/output.html">output.html</a> · 7451B · 197 LOC</td><td class="status ok"><strong>19/20</strong> · a=4 b=5 c=5 d=5 (1st)</td></tr>
+      <tr><td class="slug">meridian-codex</td><td class="status ok">OK 96.6s</td><td><a href="challenge-1/meridian-codex/output.html">output.html</a> · 5929B · 223 LOC</td><td class="status ok"><strong>18/20</strong> · a=5 b=5 c=3 d=5 (2nd, LOC 11.5% over band)</td></tr>
+      <tr><td class="slug">meridian-opus</td><td class="status ok">OK self-include</td><td><a href="challenge-1/meridian-opus/output.html">output.html</a> · 5246B · 115 LOC</td><td class="status ok"><strong>11/20</strong> · a=2 b=1 c=4 d=4 (3rd, in LOC band but weak on responsive)</td></tr>
+      <tr><td class="slug">kcs-classic</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/kcs-classic/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">rail polling-timeout 361s · swarm <code>synthesizing</code> at 5/6 steps · <a href="https://github.com/ademczuk/AnisminOS_Memory/commit/462ce5b">rail bug surfaced + patched 462ce5b</a></td></tr>
+      <tr><td class="slug">kcs-swarm</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/kcs-swarm/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">rail polling-timeout 601s · swarm <code>executing</code> at 0/3 agents · <a href="https://github.com/ademczuk/AnisminOS_Memory/commit/462ce5b">rail bug surfaced + patched 462ce5b</a></td></tr>
     </tbody>
   </table>
 
-  <p class="placeholder">Per-agent submissions land here as the fanout completes. Scoring rubric: <strong>accessibility</strong> (semantic HTML, alt text, color contrast) · <strong>responsive design</strong> (mobile-first) · <strong>inline-discipline</strong> (zero external deps) · <strong>brief-fidelity</strong> (foundry + typeface + philosophy + display + glyphs + body texture all present).</p>
+  <p>Scoring rubric (1-5 each axis): <strong>accessibility</strong> (semantic HTML, alt text, color contrast) · <strong>responsive design</strong> (mobile-first, no fixed widths) · <strong>inline-discipline</strong> (zero external deps, LOC in 80-200 band) · <strong>brief-fidelity</strong> (foundry + typeface + philosophy + display + glyphs + body texture all present). Independent-reviewer Trident consensus (Codex + Gemini-flash) — see README §Scoring.</p>
+
+  <div class="note">
+    <strong>v0 finding — KCS over-decomposition on simple-task benchmarks.</strong> Both KCS dispatch shapes (classic single-shot AND crew multi-agent) timed out without producing deliverables. Watcher initially reported "OK" because the transport call itself returned without error; the underlying swarm hadn't reached <code>completed</code> state. Empirically caught in C1 → bench-fanout.py KCS-handler now distinguishes terminal-state from polling-timeout (commit 462ce5b, 5 new tests). The bench did its job — surfaced the rail bug on a controlled challenge before C2 dispatch could compound it. KCS pair preserved as zero-byte files + <code>_meta.json</code> sidecars showing <code>kcs_status: "synthesizing"</code> / <code>"executing"</code> so the failure mode is auditable from the repo.
+  </div>
 </section>
 
 <section id="c2">
@@ -121,7 +125,7 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
     </tbody>
   </table>
 
-  <p class="placeholder">C2 held until C1 lifecycle is validated end-to-end (inbox → processing → processed → bench-results, plus meridian-opus self-include path). Sequence discipline per Trident consensus 2026-05-02.</p>
+  <p class="placeholder">C2 in flight as of 2026-05-02 21:30 UTC — Meridian drafting spec yaml + pre-computing reference expected.json. C1 lifecycle empirically validated end-to-end (inbox → processing → processed → bench-results, plus meridian-opus self-include path). Sequence discipline per Trident consensus 2026-05-02. C2 will land as a separate spec drop via the bench-fanout rail; results will replace this placeholder when available.</p>
 </section>
 
 <section id="kt">

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kepler Display — Halyard Type, Vienna</title>
+<style>
+  :root {
+    --ink: #141210;
+    --paper: #f4f1ea;
+    --rule: #2a2622;
+    --muted: #6b6358;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body { font-family: Georgia, "Times New Roman", Times, serif; font-feature-settings: "liga", "kern"; }
+  .sheet { max-width: 1040px; margin: 0 auto; padding: 64px 56px 96px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 18px; }
+  .mark { font-style: italic; letter-spacing: 0.02em; }
+  .meta { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .display {
+    font-family: "Garamond", "EB Garamond", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(96px, 14vw, 200px);
+    line-height: 0.92;
+    letter-spacing: -0.015em;
+    margin: 72px 0 24px;
+  }
+  .display em { font-style: italic; color: var(--muted); }
+  .sub {
+    font-size: 22px;
+    font-style: italic;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 96px;
+  }
+  .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; padding-top: 48px; border-top: 1px solid var(--rule); }
+  h2 { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); font-weight: normal; margin: 0 0 18px; }
+  .philosophy p { font-size: 17px; line-height: 1.6; margin: 0 0 14px; }
+  .reading p {
+    font-size: 18px;
+    line-height: 1.62;
+    text-align: justify;
+    hyphens: auto;
+    margin: 0 0 16px;
+  }
+  .reading p:first-letter {
+    font-family: Garamond, Georgia, serif;
+    font-size: 64px;
+    float: left;
+    line-height: 0.9;
+    padding: 6px 10px 0 0;
+  }
+  .glyphs { margin-top: 96px; padding-top: 48px; border-top: 1px solid var(--rule); }
+  .glyph-row {
+    font-family: Garamond, Georgia, serif;
+    font-size: 44px;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    word-spacing: 0.1em;
+  }
+  .glyph-row.italic { font-style: italic; color: var(--muted); }
+  .glyph-row.small { font-size: 28px; letter-spacing: 0.06em; }
+  .specimen { margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .specimen div { text-align: center; }
+  .specimen .pt { display: block; font-size: 11px; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; }
+  .s1 { font-size: 14px; }
+  .s2 { font-size: 22px; }
+  .s3 { font-size: 36px; }
+  .s4 { font-size: 56px; font-style: italic; }
+  footer { margin-top: 96px; padding-top: 24px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div class="mark">Halyard Type</div>
+    <div class="meta">Vienna · Est. MMXXVI · Specimen No. 01</div>
+  </header>
+
+  <div class="display">Kepler<br><em>Display</em></div>
+  <div class="sub">A high-contrast serif drawn for editorial headlines and the quiet authority of a book cover. Six weights. Roman &amp; italic.</div>
+
+  <section class="grid">
+    <div class="philosophy">
+      <h2>Philosophy</h2>
+      <p>Restraint over ornament. Classical proportion over novelty. The page is the reader's room — we furnish it carefully, then step out.</p>
+      <p>Kepler Display is shaped for the moment a page is first opened: the headline that holds, the title that earns its silence.</p>
+    </div>
+    <div class="reading">
+      <h2>Reading Texture</h2>
+      <p>The making of a typeface is, in the end, an act of trust extended to a stranger. The designer fixes proportion, rhythm, and weight; the reader, decades later and a continent away, asks only that the letters disappear into meaning. Kepler Display was drawn against that bargain. Its high contrast is tuned to the scale of a chapter opening or a magazine cover, where every curve is visible and every joint must answer for itself. Set smaller, the italic carries memory of a writing hand; set larger, the roman holds the page like a column holds a portico — present, structural, unhurried.</p>
+    </div>
+  </section>
+
+  <section class="glyphs">
+    <h2>Character Set</h2>
+    <div class="glyph-row">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+    <div class="glyph-row italic">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+    <div class="glyph-row small">0 1 2 3 4 5 6 7 8 9 &nbsp; &amp; § ¶ † ‡ · — – „ " ' ' « » ﬁ ﬂ Æ Œ ß</div>
+  </section>
+
+  <section class="specimen">
+    <div><span class="pt">14 / Roman</span><div class="s1">Halyard Type, Vienna</div></div>
+    <div><span class="pt">22 / Roman</span><div class="s2">Kepler Display</div></div>
+    <div><span class="pt">36 / Roman</span><div class="s3">Quiet Authority</div></div>
+    <div><span class="pt">56 / Italic</span><div class="s4">Kepler</div></div>
+  </section>
+
+  <footer>
+    <div>Halyard Type — Vienna I., Austria</div>
+    <div>halyardtype.at</div>
+  </footer>
+</div>
+</body>
+</html>
