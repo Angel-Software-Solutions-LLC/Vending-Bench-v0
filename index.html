@@ -82,16 +82,13 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
     <strong>Brief:</strong> Halyard Type — Kepler Display launch page. Independent type foundry, Vienna, debut high-contrast display serif for editorial headlines and book covers. Design philosophy: restraint, classical proportion, respect for the reader. System fonts only (Georgia, Garamond, Times, serif fallbacks). Foundry name + location, typeface name + philosophy statement, display-size headline, character set / glyph showcase, body-size paragraph demonstrating reading texture.
   </div>
 
+  <!-- AUTO-GEN-START:c1 -->
   <table>
     <thead>
       <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (4 axes)</th></tr>
     </thead>
     <tbody>
-      <tr><td class="slug">anismin</td><td class="status ok">OK 76.1s</td><td><a href="challenge-1/anismin/output.html">output.html</a> · 7451B · 197 LOC</td><td class="status ok"><strong>19/20</strong> · a=4 b=5 c=5 d=5 (1st)</td></tr>
-      <tr><td class="slug">meridian-codex</td><td class="status ok">OK 96.6s</td><td><a href="challenge-1/meridian-codex/output.html">output.html</a> · 5929B · 223 LOC</td><td class="status ok"><strong>18/20</strong> · a=5 b=5 c=3 d=5 (2nd, LOC 11.5% over band)</td></tr>
-      <tr><td class="slug">meridian-opus</td><td class="status ok">OK self-include</td><td><a href="challenge-1/meridian-opus/output.html">output.html</a> · 5246B · 115 LOC</td><td class="status ok"><strong>11/20</strong> · a=2 b=1 c=4 d=4 (3rd, in LOC band but weak on responsive)</td></tr>
-      <tr><td class="slug">kcs-classic</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/kcs-classic/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">rail polling-timeout 361s · swarm <code>synthesizing</code> at 5/6 steps · <a href="https://github.com/ademczuk/AnisminOS_Memory/commit/462ce5b">rail bug surfaced + patched 462ce5b</a></td></tr>
-      <tr><td class="slug">kcs-swarm</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/kcs-swarm/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">rail polling-timeout 601s · swarm <code>executing</code> at 0/3 agents · <a href="https://github.com/ademczuk/AnisminOS_Memory/commit/462ce5b">rail bug surfaced + patched 462ce5b</a></td></tr>
+      <tr><td class="slug">trident-codex</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/trident-codex/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">error=trident-codex rc=1: ; zero-byte output</td></tr>
     </tbody>
   </table>
 
@@ -100,6 +97,7 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
   <div class="note">
     <strong>v0 finding — KCS over-decomposition on simple-task benchmarks.</strong> Both KCS dispatch shapes (classic single-shot AND crew multi-agent) timed out without producing deliverables. Watcher initially reported "OK" because the transport call itself returned without error; the underlying swarm hadn't reached <code>completed</code> state. Empirically caught in C1 → bench-fanout.py KCS-handler now distinguishes terminal-state from polling-timeout (commit 462ce5b, 5 new tests). The bench did its job — surfaced the rail bug on a controlled challenge before C2 dispatch could compound it. KCS pair preserved as zero-byte files + <code>_meta.json</code> sidecars showing <code>kcs_status: "synthesizing"</code> / <code>"executing"</code> so the failure mode is auditable from the repo.
   </div>
+  <!-- AUTO-GEN-END:c1 -->
 </section>
 
 <section id="c2">
@@ -112,6 +110,7 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
     <strong>Brief (TBD):</strong> stdlib-only Python <code>reconcile.py</code> taking two embedded CSVs (payments + refunds) → deterministic JSON to stdout. Edge cases: duplicate tx_ids, partial refunds, currency mismatch, refund-exceeds-payment, malformed rows, whitespace/case in ids. Output sorted by tx_id. Reference output (<code>reference/challenge-2/expected.json</code>) precomputed by hand before dispatch; scoring is diff-against-reference. Conflict-resolution policy MUST be explicitly named in the output (<code>applied_policy</code> field) — agent declared no policy = fail.
   </div>
 
+  <!-- AUTO-GEN-START:c2 -->
   <table>
     <thead>
       <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (diff vs reference)</th></tr>
@@ -125,7 +124,8 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
     </tbody>
   </table>
 
-  <p class="placeholder">C2 in flight as of 2026-05-02 21:30 UTC — Meridian drafting spec yaml + pre-computing reference expected.json. C1 lifecycle empirically validated end-to-end (inbox → processing → processed → bench-results, plus meridian-opus self-include path). Sequence discipline per Trident consensus 2026-05-02. C2 will land as a separate spec drop via the bench-fanout rail; results will replace this placeholder when available.</p>
+  <p class="placeholder">C2 in flight — Meridian drafting spec yaml + pre-computing reference expected.json. C1 lifecycle empirically validated end-to-end. C2 will land as a separate spec drop via the bench-fanout rail; results will replace this placeholder when available.</p>
+  <!-- AUTO-GEN-END:c2 -->
 </section>
 
 <section id="kt">
