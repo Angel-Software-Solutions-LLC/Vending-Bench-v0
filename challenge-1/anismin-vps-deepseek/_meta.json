@@ -1,0 +1,6 @@
+{
+  "slug": "anismin-vps-deepseek",
+  "ok": false,
+  "duration_sec": 2.75,
+  "error": "anismin-vps-chat failed: URLError: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+}

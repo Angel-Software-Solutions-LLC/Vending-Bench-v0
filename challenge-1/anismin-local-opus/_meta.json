@@ -1,0 +1,7 @@
+{
+  "slug": "anismin-local-opus",
+  "ok": true,
+  "duration_sec": 3.41,
+  "model": "claude-opus-4-7",
+  "conv_id": "bench-fanout-5cf45070492e"
+}

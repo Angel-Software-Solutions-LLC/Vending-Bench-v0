@@ -23,9 +23,17 @@
       "scoring_method": "trident_consensus_4axis",
       "slug": "v01-smoke",
       "winner": "trident-codex"
+    },
+    {
+      "n_failed_scoring": 1,
+      "n_substantive": 1,
+      "scored_at": "2026-05-03T19:35:29Z",
+      "scoring_method": "trident_consensus_4axis",
+      "slug": "v1-anismin-smoke-2026-05-03",
+      "winner": "anismin-local-opus"
     }
   ],
-  "generated_at": "2026-05-03T17:55:33.447828+00:00",
+  "generated_at": "2026-05-03T20:30:01.977296+00:00",
   "leaderboard": [
     {
       "challenges_incomplete": 0,
@@ -56,22 +64,36 @@
       "total_score": 14
     },
     {
+      "challenges_incomplete": 0,
+      "challenges_substantive": 1,
+      "overall_rank": 5,
+      "slug": "anismin-local-opus",
+      "total_score": 12
+    },
+    {
       "challenges_incomplete": 1,
       "challenges_substantive": 0,
-      "overall_rank": 5,
+      "overall_rank": 6,
+      "slug": "anismin-vps-deepseek",
+      "total_score": 0
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 7,
       "slug": "kcs-classic",
       "total_score": 0
     },
     {
       "challenges_incomplete": 1,
       "challenges_substantive": 0,
-      "overall_rank": 6,
+      "overall_rank": 8,
       "slug": "kcs-swarm",
       "total_score": 0
     }
   ],
-  "n_agent_results_total": 7,
-  "n_challenges_scored": 3,
+  "n_agent_results_total": 9,
+  "n_challenges_scored": 4,
   "overall_leaderboard": [
     {
       "agent_slug": "trident-codex",
@@ -102,23 +124,38 @@
       "total_across": 14
     },
     {
+      "agent_slug": "anismin-local-opus",
+      "avg_per_challenge": 12.0,
+      "challenges_scored_in": 1,
+      "overall_rank": 5,
+      "total_across": 12
+    },
+    {
+      "agent_slug": "anismin-vps-deepseek",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 6,
+      "total_across": 0
+    },
+    {
       "agent_slug": "kcs-classic",
       "avg_per_challenge": 0.0,
       "challenges_scored_in": 0,
-      "overall_rank": 5,
+      "overall_rank": 7,
       "total_across": 0
     },
     {
       "agent_slug": "kcs-swarm",
       "avg_per_challenge": 0.0,
       "challenges_scored_in": 0,
-      "overall_rank": 6,
+      "overall_rank": 8,
       "total_across": 0
     }
   ],
   "schema_version": "1.0",
   "tab_assignments": {
     "c1": [
+      "v1-anismin-smoke-2026-05-03",
       "v01-smoke",
       "v01-final3",
       "halyard-type-kepler-display"

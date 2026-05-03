@@ -83,6 +83,23 @@ footer { padding: 24px; border-top: 1px solid var(--line); color: var(--muted); 
   </div>
 
   <!-- AUTO-GEN-START:c1 -->
+  <div class="challenge-subsection" data-slug="v1-anismin-smoke-2026-05-03">
+  <h3 class="challenge-heading">v1-anismin-smoke-2026-05-03 <span class="scored-at">scored 2026-05-03T19:35:29Z</span></h3>
+  <table>
+    <thead>
+      <tr><th>Agent</th><th>Status</th><th>Output</th><th>Scoring (4 axes)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="slug">anismin-local-opus</td><td class="status ok">OK 3.4s</td><td><a href="challenge-1/anismin-local-opus/output.html">output.html</a> · 4B · 1 LOC</td><td class="status ok"><strong>12/20</strong> · a=2 b=2 c=5 d=3 (1st, 1 LOC, 4B)</td></tr>
+      <tr><td class="slug">anismin-vps-deepseek</td><td class="status partial">INCOMPLETE</td><td><a href="challenge-1/anismin-vps-deepseek/_meta.json">_meta.json</a> · 0B output</td><td class="status partial">error=anismin-vps-chat failed: URLError: &lt;urlopen error [WinError 10061] No connection; zero-byte output</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>v0 finding — KCS over-decomposition on simple-task benchmarks.</strong> Both KCS dispatch shapes (classic single-shot AND crew multi-agent) timed out without producing deliverables. Watcher initially reported "OK" because the transport call itself returned without error; the underlying swarm hadn't reached <code>completed</code> state. Empirically caught in C1 → bench-fanout.py KCS-handler now distinguishes terminal-state from polling-timeout (commit 462ce5b, 5 new tests). The bench did its job — surfaced the rail bug on a controlled challenge before C2 dispatch could compound it. KCS pair preserved as zero-byte files + <code>_meta.json</code> sidecars showing <code>kcs_status: "synthesizing"</code> / <code>"executing"</code> so the failure mode is auditable from the repo.
+  </div>
+  </div>
+
   <div class="challenge-subsection" data-slug="v01-smoke">
   <h3 class="challenge-heading">v01-smoke <span class="scored-at">scored 2026-05-03T06:39:54Z</span></h3>
   <div class="brief">
