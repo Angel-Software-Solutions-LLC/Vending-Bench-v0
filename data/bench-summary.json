@@ -1,0 +1,128 @@
+{
+  "challenges": [
+    {
+      "n_failed_scoring": 5,
+      "n_substantive": 0,
+      "scored_at": "2026-05-02T21:30:07Z",
+      "scoring_method": "trident_consensus_4axis",
+      "slug": "halyard-type-kepler-display",
+      "winner": null
+    },
+    {
+      "n_failed_scoring": 0,
+      "n_substantive": 1,
+      "scored_at": "2026-05-02T21:30:29Z",
+      "scoring_method": "trident_consensus_4axis",
+      "slug": "v01-final3",
+      "winner": "trident-codex"
+    },
+    {
+      "n_failed_scoring": 0,
+      "n_substantive": 1,
+      "scored_at": "2026-05-02T21:30:57Z",
+      "scoring_method": "trident_consensus_4axis",
+      "slug": "v01-smoke",
+      "winner": "trident-codex"
+    }
+  ],
+  "generated_at": "2026-05-03T06:20:24.307092+00:00",
+  "leaderboard": [
+    {
+      "challenges_incomplete": 0,
+      "challenges_substantive": 2,
+      "overall_rank": 1,
+      "slug": "trident-codex",
+      "total_score": 38
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 2,
+      "slug": "anismin",
+      "total_score": 0
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 3,
+      "slug": "kcs-classic",
+      "total_score": 0
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 4,
+      "slug": "kcs-swarm",
+      "total_score": 0
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 5,
+      "slug": "meridian-codex",
+      "total_score": 0
+    },
+    {
+      "challenges_incomplete": 1,
+      "challenges_substantive": 0,
+      "overall_rank": 6,
+      "slug": "meridian-opus",
+      "total_score": 0
+    }
+  ],
+  "n_agent_results_total": 7,
+  "n_challenges_scored": 3,
+  "overall_leaderboard": [
+    {
+      "agent_slug": "trident-codex",
+      "avg_per_challenge": 19.0,
+      "challenges_scored_in": 2,
+      "overall_rank": 1,
+      "total_across": 38
+    },
+    {
+      "agent_slug": "anismin",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 2,
+      "total_across": 0
+    },
+    {
+      "agent_slug": "kcs-classic",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 3,
+      "total_across": 0
+    },
+    {
+      "agent_slug": "kcs-swarm",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 4,
+      "total_across": 0
+    },
+    {
+      "agent_slug": "meridian-codex",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 5,
+      "total_across": 0
+    },
+    {
+      "agent_slug": "meridian-opus",
+      "avg_per_challenge": 0.0,
+      "challenges_scored_in": 0,
+      "overall_rank": 6,
+      "total_across": 0
+    }
+  ],
+  "schema_version": "1.0",
+  "tab_assignments": {
+    "c1": [
+      "v01-smoke",
+      "v01-final3",
+      "halyard-type-kepler-display"
+    ],
+    "c2": []
+  }
+}

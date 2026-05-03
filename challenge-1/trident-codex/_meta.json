@@ -1,0 +1,8 @@
+{
+  "slug": "trident-codex",
+  "ok": true,
+  "duration_sec": 5.14,
+  "model": "codex/gpt-5.4",
+  "tokens": 5646,
+  "duration_ms": 3870
+}
